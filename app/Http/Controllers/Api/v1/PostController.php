@@ -21,8 +21,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-
-        // Respuesta con cosigos http
         return response()->json([
             'message' => 'Post deleted',
         ], 204);
