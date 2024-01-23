@@ -10,8 +10,8 @@ class PostController extends Controller
     public function index()
     {
         return view('index', [
+            // 'posts' => Post::orderBy('id')->paginate()
             'posts' => Post::latest()->paginate()
         ]);
-        //Cometario
     }
 }
